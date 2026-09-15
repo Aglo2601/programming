@@ -1,4 +1,4 @@
-from priem_getal import is_priem
+from prime.priem_getal import is_priem
 
 
 def check_goldbach(upper: int = 1000) -> None:
