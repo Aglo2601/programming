@@ -14,7 +14,6 @@ def calculate_years(start_size: int, end_size: int) -> int:
     return years
 
 if __name__ == '__main__':
-   # Vraag startgrootte (>= 9)
    while True:
        s = input("Startgrootte: ").strip()
        if not s.isdigit():
@@ -23,7 +22,6 @@ if __name__ == '__main__':
        if start >= 9:
            break
 
-   # Vraag eindgrootte (> start)
    while True:
        s = input("Eindgrootte: ").strip()
        if not s.isdigit():
