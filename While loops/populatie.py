@@ -1,34 +1,28 @@
-def calculate_years(start_size: int, end_size: int) -> int:
-    """
-    Berekent het aantal jaar dat het duurt voor de populatie om
-    end_size te bereiken.
-    """
+# 1200 / 3 = 400 nieuwe lama’s geboren. Maar er zijn ook 1200 / 4 = 300
+
+# n/4 lamas overlijden
+# n/3 lamas geboren
+# n/4-n/3 + n=e
+# start: =n
+def calculate_years(start_size, end_size,):
+    # overgebleven = n / 4 - n/3 + n
 
     years = 0
     n = start_size
     while n < end_size:
-        born = n // 3
-        dead = n // 4
-        n = n + born - dead
+        n = n - n/4 + n/3
         years += 1
+
     return years
 
 if __name__ == '__main__':
-   while True:
-       s = input("Startgrootte: ").strip()
-       if not s.isdigit():
-           continue
-       start = int(s)
-       if start >= 9:
-           break
 
-   while True:
-       s = input("Eindgrootte: ").strip()
-       if not s.isdigit():
-           continue
-       end = int(s)
-       if end > start:
-           break
+    start_size = int(input("Startgrootte: "))
+    while start_size <=8:
+        start_size = int(input("Startgrootte: "))
 
-   jaren = calculate_years(start, end)
-   print(f"Jaren: {jaren}")
+    end_size = int(input("Eindgrootte: "))
+    while end_size <= start_size:
+        end_size = int(input("Eindgrootte: "))
+    jaren = calculate_years(start_size, end_size)
+    print(f"Jaren: {jaren}")
