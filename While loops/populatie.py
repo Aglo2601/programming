@@ -4,12 +4,20 @@
 # n/3 lamas geboren
 # n/4-n/3 + n=e
 # start: =n
-def calculate_years(start_size: int, end_size: int):
+#
+def calculate_years(start_size: int, end_size: int) -> int:
+    """Calculate the number of years needed to reach the target population.
+
+    >>> calculate_years(9, 10)
+    1
+    >>> calculate_years(10, 10)
+    0
+    """
     # overgebleven = n / 4 - n/3 + n
     years = 0
     n = start_size
     while n < end_size:
-        n = n - n/4 + n/3
+        n = n - n // 4 + n // 3
         years += 1
 
     return years

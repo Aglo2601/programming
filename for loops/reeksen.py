@@ -160,22 +160,17 @@ def reeks8() -> None:
 	count = 0
 	value = 1
 	while count < 10:
-		# first value
 		print(value)
 		count += 1
 		if count >= 10:
 			break
-		# second value (double)
 		value *= 2
 		print(value)
 		count += 1
 		if count >= 10:
 			break
-		# print separator
 		print("#")
 		count += 1
 		if count >= 10:
 			break
-		# after separator increase by 4 to continue pattern
 		value *= 4
-
