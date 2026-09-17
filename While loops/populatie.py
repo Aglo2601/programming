@@ -4,7 +4,7 @@
 # n/3 lamas geboren
 # n/4-n/3 + n=e
 # start: =n
-def calculate_years(start_size, end_size,):
+def calculate_years(start_size: int, end_size: int):
     # overgebleven = n / 4 - n/3 + n
 
     years = 0
