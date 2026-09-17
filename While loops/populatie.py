@@ -6,7 +6,6 @@
 # start: =n
 def calculate_years(start_size: int, end_size: int):
     # overgebleven = n / 4 - n/3 + n
-
     years = 0
     n = start_size
     while n < end_size:
