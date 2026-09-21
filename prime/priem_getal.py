@@ -2,7 +2,7 @@ import math
 
 
 def is_priem(n: int) -> bool:
-    """Return True if n is a prime number, else False."""
+    """check for priemgetal"""
     if n < 2:
         return False
     if n == 2:
@@ -17,14 +17,14 @@ def is_priem(n: int) -> bool:
 
 
 def print_priemen_tot(N: int) -> None:
-    """Print all prime numbers strictly less than N, one per line."""
+    """print priem nummers tot N"""
     for k in range(2, N):
         if is_priem(k):
             print(k)
 
 
 def zoveelste_priem(N: int) -> int:
-    """Return the N-th prime (1-based)."""
+    """print het zoveelste priemgetal in reeks."""
     if N <= 0:
         raise ValueError("N moet een positief geheel getal zijn")
     count = 0
@@ -38,13 +38,11 @@ def zoveelste_priem(N: int) -> int:
 
 
 if __name__ == "__main__":
-    # Vraag de gebruiker herhaaldelijk om een positieve rangorde
     while True:
         try:
             s = input("Naar het hoeveelste priemgetal bent u op zoek? ")
             n = int(s)
         except Exception:
-            # Specification: we may assume an integer is entered, but be safe
             continue
         if n > 0:
             break
