@@ -7,8 +7,6 @@ def autocorrect(s: str) -> str:
     """
     result = ''
     for char in s:
-        if char.isalnum():
-            result += char
-        elif not result.endswith(char):
+        if char.isalnum() or result.endswith(char):
             result += char
     return result
