@@ -23,10 +23,10 @@ WORDLIST = load_wordlist()
 
 def new_group() -> str:
     # teken string gegenereerd
-	"""
+    """
 
     >>> group = new_group()
-    
+
     >>> len(group)
     6
     >>> all(c in CONSONANTS for c in group[0] + group[2] + group[3] + group[5])
