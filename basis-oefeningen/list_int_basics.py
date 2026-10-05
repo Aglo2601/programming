@@ -14,7 +14,7 @@ def list_check_all_even(lst: list[int]) -> bool:
 
 
 def list_count_even(lst: list[int]) -> int:
-    """Tel het aantal even integers in ``lst``.
+    """
     >>> list_count_even([1, 2, 3, 4, 6])
     3
     >>> list_count_even([-2, -1, 0, 5])
