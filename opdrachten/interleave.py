@@ -9,14 +9,14 @@ def interleave(first, second, keep=False):
     [1, 'a']
     """
     result = []
-    common_length = min(len(first), len(second))
+    mean_length = min(len(first), len(second))
 
-    for index in range(common_length):
+    for index in range(mean_length):
         result.append(first[index])
         result.append(second[index])
 
     if keep:
-        result.extend(first[common_length:])
-        result.extend(second[common_length:])
+        result.extend(first[mean_length:])
+        result.extend(second[mean_length:])
 
     return result
