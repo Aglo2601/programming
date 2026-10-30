@@ -1,4 +1,4 @@
-def chunk(values, n):
+def chunk(values: list[int], n: int) -> list[list[int]]:
     """
     >>> chunk([1, 2, 3, 4, 5, 6], 2)
     [[1, 2], [3, 4], [5, 6]]
@@ -7,7 +7,14 @@ def chunk(values, n):
     >>> chunk([], 3)
     []
     """
-    result == []
-    for index in range(0, len(values), n):
-        result.append(values[index:index + n])
+    result = []
+    current = []
+
+    for value in values:
+        current.append(value)
+        if len(current) == n:
+            result.append(current)
+            current = []
+    if current:
+        result.append(current)
     return result
