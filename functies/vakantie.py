@@ -10,6 +10,7 @@ def travel_costs(km: int) -> float:
     >>> travel_costs(2159)
     561.34
     """
+
     return 2 * km * 0.13
 
 
@@ -25,6 +26,7 @@ def overnight_costs(nights: int) -> float:
     >>> overnight_costs(12)
     720
     """
+    
     return nights * 60
 
 
@@ -42,6 +44,7 @@ def total_costs(km: int, nights: int) -> int:
     >>> total_costs(2159, 12)
     1281
     """
+
     return int((travel_costs(km) + overnight_costs(nights)) + 0.5)
 
 
