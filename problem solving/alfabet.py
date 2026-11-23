@@ -1,5 +1,8 @@
 def compare(word1: str, word2: str) -> int:
     """
+    vergelijkt een twee woorden op alfabetische volgorde, ongeacht hoofdletters of kleine letters.
+    Geeft -1 terug als het eerste woord voor het tweede komt, 1 als het tweede woord voor het eerste komt en 0 als de woorden gelijk zijn.
+    
     >>> compare('Taylor', 'Lana')
     1
     >>> compare('shark', 'sWoRd')
@@ -9,6 +12,7 @@ def compare(word1: str, word2: str) -> int:
     >>> compare('amanda', 'Amanda')
     0
     """
+
     index = 0
     while index < len(word1) and index < len(word2):
         lower1 = word1[index].lower()
@@ -23,6 +27,7 @@ def compare(word1: str, word2: str) -> int:
         return -1
     if len(word1) > len(word2):
         return 1
+    
     return 0
 
 
@@ -37,3 +42,4 @@ if __name__ == '__main__':
         print(f'{word2} first')
     else:
         print('No need to decide!')
+
